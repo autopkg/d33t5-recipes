@@ -10,6 +10,8 @@
 	<dict>
 		<key>APP_FILENAME</key>
 		<string>calibre</string>
+		<key>JSS_INVENTORY_NAME</key>
+		<string>calibre.app</string>
 		<key>CATEGORY</key>
 		<string>Productivity</string>
 		<key>GROUP_NAME</key>
