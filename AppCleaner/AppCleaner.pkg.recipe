@@ -8,8 +8,6 @@
 	<string>com.github.d33t5.pkg.AppCleaner</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>net.freemacsoft.AppCleaner</string>
 		<key>NAME</key>
 		<string>AppCleaner</string>
 	</dict>

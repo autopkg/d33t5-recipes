@@ -8,8 +8,6 @@
 	<string>com.github.d33t5.pkg.Miro</string>
 	<key>Input</key>
 	<dict>
-		<key>BUNDLE_ID</key>
-		<string>com.electron.realtimeboard</string>
 		<key>NAME</key>
 		<string>Miro</string>
 	</dict>
