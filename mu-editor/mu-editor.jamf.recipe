@@ -36,7 +36,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.dataJAR-recipes.pkg.mu-editor</string>
+	<string>com.github.d33t5.pkg.mu-editor</string>
 	<key>Process</key>
 	<array>
 		<dict>
