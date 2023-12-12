@@ -1,0 +1,47 @@
+Description: Downloads the latest versions of Arduino (arm and intel).
+Identifier: com.github.d33t5.download.Arduino-Universal
+MinimumVersion: '2.3'
+
+Input:
+  NAME: Arduino
+
+Process:
+  - Processor: GitHubReleasesInfoProvider
+    Arguments:
+      asset_regex: '.*macOS_arm64\.dmg$'
+      github_repo: 'arduino/arduino-ide'
+
+  - Processor: URLDownloader
+    Arguments:
+      filename: '%NAME%-arm64.dmg'
+      download_dir: '%RECIPE_CACHE_DIR%/downloads'
+
+  - Processor: GitHubReleasesInfoProvider
+    Arguments:
+      asset_regex: '.*macOS_64bit\.dmg$'
+      github_repo: 'arduino/arduino-ide'
+
+  - Processor: URLDownloader
+    Arguments:
+      filename: '%NAME%-x86_64.dmg'
+      download_dir: '%RECIPE_CACHE_DIR%/downloads'
+
+  - Processor: EndOfCheckPhase
+
+  - Processor: AppDmgVersioner
+    Arguments:
+      dmg_path: '%RECIPE_CACHE_DIR%/downloads/%NAME%-x86_64.dmg'
+      
+  - Processor: CodeSignatureVerifier
+    Arguments:
+      input_path: '%RECIPE_CACHE_DIR%/downloads/%NAME%-arm64.dmg/Arduino IDE.app'
+      requirement: identifier "cc.arduino.IDE2" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "7KT7ZWMCJT"
+      deep_verification: True
+      strict_verification: True
+
+  - Processor: CodeSignatureVerifier
+    Arguments:
+      input_path: '%RECIPE_CACHE_DIR%/downloads/%NAME%-x86_64.dmg/Arduino IDE.app'
+      requirement: identifier "cc.arduino.IDE2" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "7KT7ZWMCJT"
+      deep_verification: True
+      strict_verification: True
