@@ -3,13 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Emacs and imports it into your JSS.</string>
+	<string>Downloads the latest version of Miro and imports it into your JSS.</string>
 	<key>Identifier</key>
-	<string>com.github.d33t5.jss.Emacs</string>
+	<string>com.github.d33t5.jss.Miro</string>
 	<key>Input</key>
 	<dict>
-		<key>APP_FILENAME</key>
-		<string>Emacs</string>
 		<key>CATEGORY</key>
 		<string>Productivity</string>
 		<key>GROUP_NAME</key>
@@ -17,22 +15,31 @@
 		<key>GROUP_TEMPLATE</key>
 		<string>SmartGroupTemplate.xml</string>
 		<key>NAME</key>
-		<string>Emacs</string>
+		<string>Miro</string>
 		<key>POLICY_CATEGORY</key>
 		<string>Testing</string>
 		<key>POLICY_TEMPLATE</key>
 		<string>PolicyTemplate.xml</string>
 		<key>SELF_SERVICE_DESCRIPTION</key>
-		<string>An extensible, customizable, free/libre text editor — and more. At its core is an interpreter for Emacs Lisp, a dialect of the Lisp programming language with extensions to support text editing.</string>
+		<string>The online collaborative whiteboard platform to bring teams together, anytime, anywhere.</string>
 		<key>SELF_SERVICE_ICON</key>
 		<string>%NAME%.png</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.d33t5.pkg.Emacs</string>
+	<string>com.github.d33t5.pkg.Miro</string>
 	<key>Process</key>
 	<array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+               <key>warning_message</key>
+               <string>The .jss recipes in the d33t5-recipes repository will stop working in a future version of Jamf planned for late 2022. Please consider switching your JSSImporter workflows to JamfUploader instead. Details: https://grahamrpugh.com/2022/02/16/jssimporter-jamf-pro-api-token-auth.html</string>
+            </dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+         </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -49,8 +56,6 @@
 						<string>%GROUP_TEMPLATE%</string>
 					</dict>
 				</array>
-				<key>jss_inventory_name</key>
-				<string>Emacs</string>
 				<key>policy_category</key>
 				<string>%POLICY_CATEGORY%</string>
 				<key>policy_template</key>
