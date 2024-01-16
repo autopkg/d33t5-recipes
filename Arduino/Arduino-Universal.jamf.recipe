@@ -36,7 +36,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jps3.pkg.Arduino</string>
+	<string>com.github.d33t5.pkg.Arduino-Universal</string>
 	<key>Process</key>
 	<array>
 		<dict>
