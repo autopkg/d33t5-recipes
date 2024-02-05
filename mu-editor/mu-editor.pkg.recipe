@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>mu-editor</string>
+		<string>MU Editor</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
@@ -21,7 +21,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>app_path</key>
-				<string>%pathname%/mu-editor.app</string>
+				<string>%pathname%/MU Editor.app</string>
 				<key>bundleid</key>
 				<string>com.github.mu-editor-%version%</string>
 				<key>version</key>
