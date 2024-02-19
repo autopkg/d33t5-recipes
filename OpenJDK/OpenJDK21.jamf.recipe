@@ -36,7 +36,7 @@
 	<key>MinimumVersion</key>
 	<string>2.3</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.pkg.OpenJDK21</string>
+	<string>com.github.d33t5.pkg.OpenJDK21</string>
 	<key>Process</key>
 	<array>
 		<dict>
